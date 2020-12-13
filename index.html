@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Calcola danni dei dadi</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body class="container">
+    <form class="form-control">
+        <div class="form-group">
+            <label for="baseBox">
+                Danni base:
+                <input id="baseBox" type="text" class="form-control"
+                       aria-describedby="baseHelp" placeholder="Inserisci i danni fissi">
+                <select id="tipoBase" class="form-control form-control-sm">
+                    <option selected disabled></option>
+                    <option>Contundente</option>
+                    <option>Tagliente</option>
+                    <option>Perforante</option>
+                    <option>Acido</option>
+                    <option>Freddo/Gelo</option>
+                    <option>Fuoco</option>
+                    <option>Forza</option>
+                    <option>Fulmine</option>
+                    <option>Necrotico</option>
+                    <option>Veleno</option>
+                    <option>Psichico</option>
+                    <option>Radiante</option>
+                    <option>Tuono</option>
+                </select>
+                <small id="baseHelp" class="form-text text-muted">
+                    Inserisci il tuo modificatore di riferimento più eventuali potenziamenti
+                </small>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="baseBox">
+                Danni primo dado:
+                <input id="dado1Box" type="text" class="form-control"
+                       aria-describedby="dado1Help" placeholder="1d6">
+                <select id="tipoDado1">
+                    <option selected disabled></option>
+                    <option>Contundente</option>
+                    <option>Tagliente</option>
+                    <option>Perforante</option>
+                    <option>Acido</option>
+                    <option>Freddo/Gelo</option>
+                    <option>Fuoco</option>
+                    <option>Forza</option>
+                    <option>Fulmine</option>
+                    <option>Necrotico</option>
+                    <option>Veleno</option>
+                    <option>Psichico</option>
+                    <option>Radiante</option>
+                    <option>Tuono</option>
+                </select>
+                <small id="dado1Help" class="form-text text-muted">
+                    Inserisci il primo dado e il suo tipo di danno.
+                </small>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="baseBox">
+                Danni secondo dado:
+                <input id="dado2Box" type="text" class="form-control"
+                       aria-describedby="dado2Help" placeholder="1d6">
+                <select id="tipoDado2">
+                    <option selected disabled></option>
+                    <option>Contundente</option>
+                    <option>Tagliente</option>
+                    <option>Perforante</option>
+                    <option>Acido</option>
+                    <option>Freddo/Gelo</option>
+                    <option>Fuoco</option>
+                    <option>Forza</option>
+                    <option>Fulmine</option>
+                    <option>Necrotico</option>
+                    <option>Veleno</option>
+                    <option>Psichico</option>
+                    <option>Radiante</option>
+                    <option>Tuono</option>
+                </select>
+                <small id="dado2Help" class="form-text text-muted">
+                    Inserisci il secondo dado e il suo tipo di danno.
+                </small>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="baseBox">
+                Danni terzo dado:
+                <input id="dado3Box" type="text" class="form-control"
+                       aria-describedby="dado3Help" placeholder="1d6">
+                <select id="tipoDado3">
+                    <option selected disabled></option>
+                    <option>Contundente</option>
+                    <option>Tagliente</option>
+                    <option>Perforante</option>
+                    <option>Acido</option>
+                    <option>Freddo/Gelo</option>
+                    <option>Fuoco</option>
+                    <option>Forza</option>
+                    <option>Fulmine</option>
+                    <option>Necrotico</option>
+                    <option>Veleno</option>
+                    <option>Psichico</option>
+                    <option>Radiante</option>
+                    <option>Tuono</option>
+                </select>
+                <small id="dado3Help" class="form-text text-muted">
+                    Inserisci il terzo dado e il suo tipo di danno.
+                </small>
+            </label>
+        </div>
+        <button type="submit" class="btn btn-success">Calcola</button>
+        <button type="reset" class="btn btn-outline-danger">Reset</button>
+    </form>
+</body>
+</html>
