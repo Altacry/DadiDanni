@@ -6,14 +6,16 @@
     <title>Calcola danni dei dadi</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body class="container">
-    <form class="form-control">
-        <div class="form-group">
+    <form class="form-control" id="app">
+        <div class="form-group m-2">
             <label for="baseBox">
                 Danni base:
-                <input id="baseBox" type="text" class="form-control"
-                       aria-describedby="baseHelp" placeholder="Inserisci i danni fissi">
+                <input id="baseBox" type="text" class="form-control my-1"
+                       aria-describedby="baseHelp" placeholder="Inserisci i danni fissi"
+                       v-model="danniBase">
                 <select id="tipoBase" class="form-control form-control-sm">
                     <option selected disabled></option>
                     <option>Contundente</option>
@@ -38,9 +40,9 @@
         <div class="form-group">
             <label for="baseBox">
                 Danni primo dado:
-                <input id="dado1Box" type="text" class="form-control"
+                <input id="dado1Box" type="text" class="form-control my-1"
                        aria-describedby="dado1Help" placeholder="1d6">
-                <select id="tipoDado1">
+                <select id="tipoDado1" class="form-control form-control-sm">
                     <option selected disabled></option>
                     <option>Contundente</option>
                     <option>Tagliente</option>
@@ -64,9 +66,9 @@
         <div class="form-group">
             <label for="baseBox">
                 Danni secondo dado:
-                <input id="dado2Box" type="text" class="form-control"
+                <input id="dado2Box" type="text" class="form-control my-1"
                        aria-describedby="dado2Help" placeholder="1d6">
-                <select id="tipoDado2">
+                <select id="tipoDado2" class="form-control form-control-sm">
                     <option selected disabled></option>
                     <option>Contundente</option>
                     <option>Tagliente</option>
@@ -90,9 +92,9 @@
         <div class="form-group">
             <label for="baseBox">
                 Danni terzo dado:
-                <input id="dado3Box" type="text" class="form-control"
+                <input id="dado3Box" type="text" class="form-control my-1"
                        aria-describedby="dado3Help" placeholder="1d6">
-                <select id="tipoDado3">
+                <select id="tipoDado3" class="form-control form-control-sm">
                     <option selected disabled></option>
                     <option>Contundente</option>
                     <option>Tagliente</option>
@@ -113,8 +115,11 @@
                 </small>
             </label>
         </div>
-        <button type="submit" class="btn btn-success">Calcola</button>
-        <button type="reset" class="btn btn-outline-danger">Reset</button>
+        <br>
+        <div class="justify-content-between">
+            <button type="button" class="btn btn-success mx-2" v-on:click="calcolaDanni()">Calcola</button>
+            <button type="reset" class="btn btn-outline-danger mx-2">Reset</button>
+        </div>
     </form>
 </body>
 </html>
